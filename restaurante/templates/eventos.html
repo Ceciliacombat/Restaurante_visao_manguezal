@@ -1,0 +1,78 @@
+{% extends "homepage.html" %}
+  
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+{% endblock %}
+
+{% block header %}
+<header>
+    <div class="logo">
+      <a href="/"> <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"></a>
+</div>
+    <nav class="navbar">
+      <div class=" botoes">
+    
+        <ul>
+          <a href="/"><li>Início</li></a>
+          <a href="/cardapio"><li>Cardápio</li></a>
+          <a href="/eventos"><li>Eventos</li></a>
+          <a href="/pedidos"><li>Pedidos</li></a>
+          <a href="/adm"><li>Admin</li></a>
+        </ul>
+    
+    </div>
+    </class>
+    </nav>
+</class>
+</header>
+{% endblock %}
+
+{% block main1 %}
+<main>
+   
+
+  <body>
+
+
+    <main>
+      <h1>Registrar Evento</h1>
+      <form method="POST">
+          {{ form.hidden_tag() }}
+  
+          <!-- Campo Data do Evento -->
+          <div>
+              <label for="data_evento">{{ form.data_evento.label }}</label>
+              {{ form.data_evento() }}
+          </div>
+  
+          <!-- Campo Responsável -->
+          <div>
+              <label for="responsavel">{{ form.responsavel.label }}</label>
+              {{ form.responsavel() }}
+          </div>
+  
+          <!-- Campo Quantidade de Pessoas -->
+          <div>
+              <label for="quantidade_pessoas">{{ form.quantidade_pessoas.label }}</label>
+              {{ form.quantidade_pessoas() }}
+          </div>
+  
+          <!-- Campo Horário do Evento -->
+          <div>
+              <label for="horario_evento">{{ form.horario_evento.label }}</label>
+              {{ form.horario_evento() }}
+          </div>
+  
+          <!-- Campo Observações -->
+          <div>
+              <label for="observacao">{{ form.observacao.label }}</label>
+              {{ form.observacao() }}
+          </div>
+  
+          <!-- Botão de Enviar -->
+          <div>
+              {{ form.submit() }}
+          </div>
+      </form>
+ </main>
+  {% endblock %}

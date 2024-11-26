@@ -1,0 +1,165 @@
+{% extends "homepage.html" %}
+  
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cardapio.css') }}">
+
+{% endblock %}
+
+{% block header %}
+<header>
+    <div class="logo">
+      <a href="/"> <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"></a>
+</div>
+    <nav class="navbar">
+      <div class=" botoes">
+    
+        <ul>
+          <a href="/"><li>Início</li></a>
+          <a href="/cardapio"><li>Cardápio</li></a>
+          <a href="/eventos"><li>Eventos</li></a>
+          <a href="/pedidos"><li>Pedidos</li></a>
+          <a href="/adm"><li>Admin</li></a>
+        </ul>
+
+    </div>
+    </class>
+    </nav>
+</class>
+</header>
+{% endblock %}
+
+{% block main1 %}
+<main>
+   
+  <div class="menu-container">
+    <header class="menu-header">
+        <h1>Restaurante Visão do Manguezal</h1>
+        <p class="subtitle">Cardápio Especial: Moquecas e Ensopados</p>
+    </header>
+
+    <section class="menu-section">
+        <h2 class="section-title">Peixes</h2>
+        <div class="menu-item">
+            <span class="item-name">Robalo</span>
+            <span class="item-price">R$ 85,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Pescada Amarela</span>
+            <span class="item-price">R$ 85,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Arraia</span>
+            <span class="item-price">R$ 70,00</span>
+        </div>
+        <p class="accompaniments"><strong>Acompanhamentos:</strong> arroz + feijão + pirão.</p>
+    </section>
+
+    <section class="menu-section">
+        <h2 class="section-title">Camarão</h2>
+        <div class="menu-item">
+            <span class="item-name">Camarão Moqueca</span>
+            <span class="item-price">R$ 90,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Camarão Ensopado</span>
+            <span class="item-price">R$ 90,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Camarão no Alho e Óleo</span>
+            <span class="item-price">R$ 80,00</span>
+        </div>
+        <p class="accompaniments"><strong>Acompanhamentos:</strong> arroz + feijão + pirão.</p>
+    </section>
+
+    <section class="menu-section">
+        <h2 class="section-title">Mariscos</h2>
+        <div class="menu-item">
+            <span class="item-name">Aratu Catado</span>
+            <span class="item-price">R$ 70,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Siri Catado</span>
+            <span class="item-price">R$ 70,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Caranguejo Catado</span>
+            <span class="item-price">R$ 70,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Ostra</span>
+            <span class="item-price">R$ 70,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Sururu</span>
+            <span class="item-price">R$ 70,00</span>
+        </div>
+        <p class="accompaniments"><strong>Acompanhamentos:</strong> arroz + feijão + farofa.</p>
+    </section>
+    
+    <section class="menu-section">
+        <h2 class="section-title">Tira-Gostos</h2>
+        <div class="menu-item">
+            <span class="item-name">Moqueca de Camarão</span>
+            <span class="item-price">R$ 85,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Moqueca de Robalo</span>
+            <span class="item-price">R$ 85,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Camarão no Alho e Óleo</span>
+            <span class="item-price">R$ 75,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Peixe Frito</span>
+            <span class="item-price">R$ 75,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Aratu Catado</span>
+            <span class="item-price">R$ 65,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Siri Catado</span>
+            <span class="item-price">R$ 65,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Caranguejo Catado</span>
+            <span class="item-price">R$ 65,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Ostra</span>
+            <span class="item-price">R$ 65,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Sururu</span>
+            <span class="item-price">R$ 65,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Arraia</span>
+            <span class="item-price">R$ 65,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Carne do Sol</span>
+            <span class="item-price">R$ 45,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Carne de Fumeiro (Mantinha)</span>
+            <span class="item-price">R$ 45,00</span>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Casquinha de Siri</span>
+            <span class="item-price">R$ 20,00</span>
+        </div>
+    </section>
+    
+    <section class="menu-description">
+        <p class="description-text">
+            <strong>Nota:</strong> O cardápio é apenas uma amostra de nossos pratos típicos e especiais. E para maior comodidade, disponibilizamos <strong>QR Codes nas mesas</strong> do restaurante, permitindo acesso direto ao site e ao cardápio digital.  
+            <br><br>
+            Nosso foco principal é oferecer praticidade e sabor com <strong>marmita</strong> e o <strong>prato feito da casa</strong>. Além disso, disponibilizamos um serviço exclusivo para <strong>reserva de eventos</strong>, garantindo momentos inesquecíveis.
+        </p>
+    </section>
+  
+  </main>
+  {% endblock %}

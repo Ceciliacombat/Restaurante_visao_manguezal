@@ -1,0 +1,29 @@
+/* Container das opções */
+.opcoes-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 20px; /* Espaçamento entre os botões */
+    margin: 50px auto; /* Centraliza na página com margem */
+}
+
+/* Estilo dos botões */
+.opcao-botao {
+    display: inline-block;
+    text-align: center;
+    padding: 20px 40px;
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    transition: transform 0.3s, background-color 0.3s; /* Animações */
+}
+
+/* Animação de hover */
+.opcao-botao:hover {
+    background-color: #45a049; /* Cor mais escura no hover */
+    transform: scale(1.05); /* Leve aumento no tamanho */
+}

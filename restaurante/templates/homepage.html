@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visão do Manguezal</title>
+    {% block style %}
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+  
+    {% endblock %}
+  
+  </head>
+
+
+<body>
+  {% block header %}
+    <header>
+        <div class="logo">
+          <a href="/"> <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"></a>
+    </div>
+        <nav class="navbar">
+          <div class=" botoes">
+        
+          <ul>
+          <a href="/"><li>Início</li></a>
+          <a href="/cardapio"><li>Cardápio</li></a>
+          <a href="/eventos"><li>Eventos</li></a>
+          <a href="/pedidos"><li>Pedidos</li></a>
+          <a href="/adm"><li>Admin</li></a>
+          </ul>
+        
+        </div>
+        </class>
+        </nav>
+    </class>
+    </header>
+    {% endblock %}
+
+    
+
+  {% block main1 %}
+      <section class="hero-section">
+        <div class="overlay">
+            <h1>SOBRE NÓS</h1>
+        </div>
+    </section>
+
+    <section class="section-historia">
+        <div class="container">
+            <h2>História do Restaurante</h2>
+            <p>O Restaurante Visão do Manguezal, pensado em teoria desde o início de 2001, foi inaugurado e aberto ao público desde 08 de janeiro de 2003. Localizado no distrito de Maragogipinho-BA, às margens do Rio Jaguaripe e com vasta visão para o manguezal, o estabelecimento desde a sua fundação trabalha com pratos típicos baianos, principalmente as moquecas, a partir dos frutos do mar
+                característicos da região. Atualmente, com aproximadamente 21 anos, o restaurante conta com a colaboração de seis funcionários fixos, comprometidos em levar aos clientes uma experiência gastronômica agradável, qualitativa e de sabor marcadamente baiano; feitas e servidas em panelas de barro, as famosas moquecas
+                atravessam gerações.</p>
+        </div>
+    </section>
+
+    <section class="section-pratos">
+        <h2>Alguns de Nossos Pratos</h2>
+        <div class="pratos-grid">
+            <div class="prato-item">Prato 1</div>
+            <div class="prato-item">Prato 2</div>
+            <div class="prato-item">Prato 3</div>
+        </div>
+
+      {% endblock %}
+
+    </body>
+
+
+{% block footer %}
+<footer class="rodape">
+  <div>
+      <div class="redes-container">
+          <h3 class="titulo-rodape"> ENTRE EM CONTATO: </h3>
+          <a href="https://www.instagram.com/restvisao_manguezal?igsh=MWl3cmgxaHpqNmk2NQ==">
+          <img class="redes-sociais" src="{{ url_for('static', filename='images/rodape/insta.webp') }}" alt="Instagram">
+          <span class="texto-redes-sociais">restvisao_manguezal</span>
+          </a>
+          <br>
+          <a href="https://wa.me/5575988744747">
+           <img class="redes-sociais" src="{{ url_for('static', filename='images/rodape/whatsapp.png') }}" alt="WhatsApp">
+           <span class="texto-redes-sociais">(75) 98874-4747</span>
+          </a>
+      </div>
+  </div>
+  <a href="/"><img class="logo-rodape" src="{{ url_for('static', filename='images/rodape/logo-rodape.png') }}" alt="Imagem"></a>
+</footer>
+{% endblock %}
+</html>

@@ -1,0 +1,66 @@
+{% extends "homepage.html" %}
+  
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+{% endblock %}
+
+{% block header %}
+<header>
+    <div class="logo">
+      <a href="/"> <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"></a>
+</div>
+    <nav class="navbar">
+      <div class=" botoes">
+    
+        <ul>
+          <a href="/"><li>Início</li></a>
+          <a href="/cardapio"><li>Cardápio</li></a>
+          <a href="/eventos"><li>Eventos</li></a>
+          <a href="/pedidos"><li>Pedidos</li></a>
+          <a href="/adm"><li>Admin</li></a>
+        </ul>
+
+    </div>
+    </class>
+    </nav>
+</class>
+</header>
+{% endblock %}
+
+{% block main1 %}
+<main class="admin-page">
+    <h1>Eventos Cadastrados</h1>
+  
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Responsável</th>
+                <th>Data</th>
+                <th>Horário</th>
+                <th>Observações</th>
+                <th>Ações</th> <!-- Nova coluna para ações -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for evento in eventos %}
+            <tr>
+                <td>{{ evento.id }}</td>
+                <td>{{ evento.responsavel }}</td>
+                <td>{{ evento.data_evento }}</td>
+                <td>{{ evento.horario_evento }}</td>
+                <td>{{ evento.observacao }}</td>
+                <td>
+                    <!-- Link para excluir o evento -->
+                    <a href="{{ url_for('excluir_evento', id=evento.id) }}" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir este evento?');">Excluir</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <a href="{{ url_for('adm')}}">Voltar para Administração</a>
+  </main>
+  
+  {% endblock %}

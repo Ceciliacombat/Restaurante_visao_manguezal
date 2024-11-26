@@ -1,0 +1,88 @@
+{% extends "homepage.html" %}
+  
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+{% endblock %}
+
+{% block header %}
+<header>
+    <div class="logo">
+      <a href="/"> <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"></a>
+</div>
+    <nav class="navbar">
+      <div class=" botoes">
+    
+        <ul>
+          <a href="/"><li>Início</li></a>
+          <a href="/cardapio"><li>Cardápio</li></a>
+          <a href="/eventos"><li>Eventos</li></a>
+          <a href="/pedidos"><li>Pedidos</li></a>
+          <a href="/adm"><li>Admin</li></a>
+          </ul>
+    
+    </div>
+    </class>
+    </nav>
+</class>
+</header>
+{% endblock %}
+
+{% block main1 %}
+<main>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        
+        <h2>Marmita</h2>
+        {{ form.marmita.opcoes_carnes.label }} {{ form.marmita.opcoes_carnes() }}<br>
+    
+        <h3>Acompanhamentos</h3>
+        {{ form.marmita.arroz.label }} {{ form.marmita.arroz() }}<br>
+        {{ form.marmita.feijao.label }} {{ form.marmita.feijao() }}<br>
+        {{ form.marmita.salada.label }} {{ form.marmita.salada() }}<br>
+        {{ form.marmita.farofa.label }} {{ form.marmita.farofa() }}<br>
+    
+        {{ form.marmita.adicional.label }} {{ form.marmita.adicional() }}<br>
+        {{ form.marmita.observacao.label }} {{ form.marmita.observacao() }}<br>
+        
+        <h2>Prato Pronto</h2>
+        {{ form.prato_pronto.prato_pronto.label }} {{ form.prato_pronto.prato_pronto() }}<br>
+        {{ form.prato_pronto.observacao_prato.label }} {{ form.prato_pronto.observacao_prato() }}<br>
+        
+        {{ form.submit() }}
+    </form>
+  </body>
+</main>
+ {% endblock %} 
+
+
+
+
+
+
+ @app.route('/pedidos', methods=['GET', 'POST'])
+def pedidos():
+    form = Formpedidos()  # Instância do formulário principal
+
+    if form.validate_on_submit():
+        # Processar os dados do formulário
+        novo_pedido = Pedidos(
+            responsavel=form.responsavel.data,
+            opcoes_de_carne=form.marmita.opcoes_carnes.data,
+            acompanhamentos={
+                'arroz': form.marmita.arroz.data,
+                'feijao': form.marmita.feijao.data,
+                'salada': form.marmita.salada.data,
+                'farofa': form.marmita.batata_frita.data
+            },
+            adicional=form.marmita.adicional.data,
+            observacao=form.marmita.observacao.data,
+            prato_feito=form.prato_pronto.prato_pronto.data,
+            observacao_prato=form.prato_pronto.observacao_prato.data
+        )
+        # Salvar no banco de dados
+        database.session.add(novo_pedido)
+        database.session.commit()
+        flash('Pedido enviado com sucesso!')
+        return redirect(url_for('pedidos'))
+
+    return render_template('pedidos.html', form=form)

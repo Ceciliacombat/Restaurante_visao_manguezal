@@ -1,0 +1,88 @@
+{% extends "homepage.html" %}
+  
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/marmitas.css') }}">
+{% endblock %}
+
+{% block header %}
+<header>
+    <div class="logo">
+      <a href="/"> <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"></a>
+</div>
+    <nav class="navbar">
+      <div class=" botoes">
+    
+        <ul>
+          <a href="/"><li>Início</li></a>
+          <a href="/cardapio"><li>Cardápio</li></a>
+          <a href="/eventos"><li>Eventos</li></a>
+          <a href="/pedidos"><li>Pedidos</li></a>
+          <a href="/adm"><li>Admin</li></a>
+          </ul>
+    
+    </div>
+    </class>
+    </nav>
+</class>
+</header>
+{% endblock %}
+
+{% block main1 %}
+<main>
+  <form method="post">
+      {{ form.hidden_tag() }}
+      
+      <h2>Marmita</h2>
+      
+      <!-- Campo Responsável -->
+      <div>
+          {{ form.responsavel.label }} {{ form.responsavel() }}<br>
+      </div>
+      
+      <!-- Opções de Carne -->
+      <div>
+          {{ form.opcoes_carnes.label }} {{ form.opcoes_carnes() }}<br>
+      </div>
+  
+      <h3>Acompanhamentos</h3>
+      <!-- Acompanhamentos -->
+     
+      <div class="checkbox-container">
+          <label>
+              {{ form.arroz() }}
+              <span></span>
+              {{ form.arroz.label }}
+          </label>
+          <label>
+              {{ form.feijao() }}
+              <span></span>
+              {{ form.feijao.label }}
+          </label>
+          <label>
+              {{ form.salada() }}
+              <span></span>
+              {{ form.salada.label }}
+          </label>
+          <label>
+              {{ form.farofa() }}
+              <span></span>
+              {{ form.farofa.label }}
+          </label>
+      </div>
+      
+
+      <!-- Adicional e Observação -->
+      <div>
+          {{ form.adicional.label }} {{ form.adicional() }}<br>
+          {{ form.observacao.label }} {{ form.observacao() }}<br>
+      </div>
+      
+      <!-- Botão de Envio -->
+      <div>
+          {{ form.submit() }}
+      </div>
+  </form>
+</main>
+
+ {% endblock %} 

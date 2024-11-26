@@ -1,0 +1,44 @@
+{% extends "homepage.html" %}
+  
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+{% endblock %}
+
+{% block header %}
+<header>
+    <div class="logo">
+      <a href="/"> <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"></a>
+</div>
+    <nav class="navbar">
+      <div class=" botoes">
+    
+        <ul>
+          <a href="/"><li>Início</li></a>
+          <a href="/cardapio"><li>Cardápio</li></a>
+          <a href="/eventos"><li>Eventos</li></a>
+          <a href="/pedidos"><li>Pedidos</li></a>
+          <a href="/adm"><li>Admin</li></a>
+          </ul>
+    
+    </div>
+    </class>
+    </nav>
+</class>
+</header>
+{% endblock %}
+
+{% block main1 %}
+<main>
+  
+  <h1>Administração</h1>
+  <p>Escolha uma categoria para gerenciar:</p>
+  
+  <div class="admin-opcoes">
+      <a href="/admin/marmitas" class="admin-botao">Marmitas</a>
+      <a href="/admin/pratofeito" class="admin-botao">Prato Feito</a>
+      <a href="/admin/eventos" class="admin-botao">Eventos</a>
+  </div>
+</main>
+  
+  {% endblock %}

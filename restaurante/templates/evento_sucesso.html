@@ -1,0 +1,48 @@
+{% extends "homepage.html" %}
+  
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/evento_sucesso.css') }}">
+{% endblock %}
+
+{% block header %}
+<header>
+    <div class="logo">
+      <a href="/"> <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"></a>
+</div>
+    <nav class="navbar">
+      <div class=" botoes">
+    
+        <ul>
+          <a href="/"><li>Início</li></a>
+          <a href="/cardapio"><li>Cardápio</li></a>
+          <a href="/eventos"><li>Eventos</li></a>
+          <a href="/pedidos"><li>Pedidos</li></a>
+          <a href="/adm"><li>Admin</li></a>
+        </ul>
+
+    </div>
+    </class>
+    </nav>
+</class>
+</header>
+{% endblock %}
+
+{% block main1 %}
+<main>
+   
+    <div class="sucesso-container">
+        <div class="sucesso-message">
+            <h1 class="title">Evento Marcado com Sucesso!</h1>
+            <p class="carinho-message">Obrigada por fazer uma reserva com a gente! 🎉</p>
+            <p class="sub-message">Nosso time está ansioso para cuidar de cada detalhe para você.</p>
+            
+            <!-- Botão para voltar à homepage -->
+            <a href="{{ url_for('homepage') }}" class="botao-homepage">Voltar para a Home</a>
+        </div>
+    </div>
+    
+
+  
+  </main>
+  {% endblock %}

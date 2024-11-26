@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: "Archivo";
+}
+
+header{
+    top: 0; left: 0; right: 0;
+    background:linear-gradient(to right, white, #65b076);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    flex-direction: row;
+}
+
+li{
+    display: inline-block;
+    margin: 20px;
+    font-weight: 1000;
+    font-size: 20px;
+    
+
+}
+a{
+    color: #000000;
+}
+a:hover{
+    color: rgb(62, 123, 57);
+}
+
+/* RODAPÉ estilização rodapé*/
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d1d1d; 
+    margin: 0;
+    padding: 3rem 5rem; 
+    color: white;
+}
+
+.titulo-rodape {
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.logo-rodape {
+    height: 13rem; 
+}
+
+.redes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; 
+}
+
+.redes-sociais {
+    height: 1.5rem;
+    margin-right: 10px;
+    vertical-align: middle; 
+}
+
+.texto-redes-sociais {
+    color: white;
+    font-size: 16px; 
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.redes-container a {
+    text-decoration: none;
+    color: white; 
+}
+
+.redes-container a:hover {
+    color: #f39c12; 
+}
+
+.redes-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+} 
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EAF5EA;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pedido-section {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F0F4F0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pedido-section div {
+    flex: 1;
+    margin: 0 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+select, textarea, input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header {
+    background-color: #e5f8e5;
+    padding: 20px;
+}
+header h1 {
+    margin: 0;
+}
+main {
+    padding: 20px;
+}
+form {
+    background-color: #d4f0d4;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    max-width: 500px;
+    width: 100%;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+input[type="text"], input[type="date"], input[type="number"], input[type="time"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+textarea {
+    resize: vertical;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+footer {
+    margin-top: 30px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.hero-section {
+    position: relative;
+    background-image: url('../images/baner.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.overlay h1 {
+    color: white;
+    font-size: 3rem;
+}
+
+
+.section-historia {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.section-historia h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section-historia p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+
+.section-pratos {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.section-pratos h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pratos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.prato-item {
+    width: 200px;
+    height: 150px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #333;
+    border-radius: 8px;
+}
+

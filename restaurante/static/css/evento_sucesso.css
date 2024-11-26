@@ -1,0 +1,82 @@
+/* sucesso.css - CSS para a página de evento com sucesso */
+.sucesso-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+}
+
+.sucesso-message {
+    text-align: center;
+    padding: 30px;
+    background-color: #d4edda;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    animation: fadeIn 1s ease-out;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #3c763d;
+    margin-bottom: 15px;
+    animation: slideInFromTop 1s ease-in;
+}
+
+.carinho-message {
+    font-size: 1.3rem;
+    color: #155724;
+    margin: 15px 0;
+    font-weight: bold;
+    animation: bounceIn 1.5s ease-out;
+}
+
+.sub-message {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+/* Estilo para o botão */
+.botao-homepage {
+    display: inline-block;
+    background-color: #28a745;  /* Cor verde para o botão */
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: buttonFadeIn 1.5s ease-out; /* Animação de fade-in */
+}
+
+.botao-homepage:hover {
+    background-color: #218838;  /* Cor verde mais escura ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumento do botão */
+}
+
+/* Animações */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInFromTop {
+    0% { transform: translateY(-100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes buttonFadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

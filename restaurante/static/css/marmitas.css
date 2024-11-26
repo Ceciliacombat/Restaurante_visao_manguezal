@@ -1,0 +1,206 @@
+/* Estilo geral para o formulário */
+form {
+    background-color: #eaf9e6; /* Cor de fundo suave */
+    padding: 20px;
+    border-radius: 15px; /* Bordas arredondadas */
+    max-width: 500px; /* Largura máxima */
+    margin: 20px auto; /* Centralizar */
+    font-family: Arial, sans-serif; /* Fonte limpa */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    text-align: center; /* Centralizar texto */
+  }
+  
+  /* Título principal */
+  form h2 {
+    font-size: 24px;
+    color: #2d6a2d; /* Verde escuro */
+    margin-bottom: 10px;
+  }
+  
+  /* Subtítulo */
+  form p {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Seções com títulos */
+  form h3 {
+    font-size: 18px;
+    color: #2d6a2d;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+  
+  /* Div de grupos de opções (radio e checkbox) */
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo de labels para inputs */
+  form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    text-align: left; /* Alinha o texto à esquerda */
+  }
+  
+  /* Inputs (radio e checkbox) */
+  form input[type="radio"],
+  form input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  /* Grupo de opções em linha */
+  form .group-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Inputs de texto e textarea */
+  form input[type="text"],
+  form textarea {
+    width: 100%; /* Largura total */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box; /* Inclui padding na largura */
+  }
+  
+  /* Textarea */
+  form textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+  
+  /* Botão de envio */
+  form button,
+  form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover,
+  form input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+
+
+
+
+ /* Contêiner principal do formulário */
+form {
+    width: 100%;
+    max-width: 600px; /* Limita a largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+    padding: 20px;
+    background-color: #e6f9e6; /* Fundo verde claro */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para o título */
+  h2, h3 {
+    text-align: center;
+    color: #2e8b57; /* Verde escuro */
+  }
+  
+  /* Centraliza a lista de acompanhamentos */
+  .checkbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    gap: 15px;
+    padding: 10px 0;
+  }
+  
+  /* Cada item da lista (checkbox) */
+  .checkbox-container label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Deixa o checkbox à esquerda e o texto à direita */
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+    position: relative;
+    padding-left: 30px;
+    margin: 0;
+  }
+  
+  /* Esconde o checkbox original */
+  .checkbox-container input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  /* Estilo do quadrado de verificação */
+  .checkbox-container span {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #28a745; /* Borda verde */
+    margin-right: 10px;
+    display: inline-block;
+    background-color: transparent; /* Sem fundo inicialmente */
+    transition: background-color 0.3s, border-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Quando o checkbox está marcado */
+  .checkbox-container input[type="checkbox"]:checked + span {
+    background-color: #28a745; /* Fundo verde */
+    border-color: #28a745; /* Borda verde */
+  }
+  
+  /* Ícone de correto (✔) dentro do quadrado */
+  .checkbox-container input[type="checkbox"]:checked + span::after {
+    content: '✔'; /* Símbolo de correto */
+    color: white; /* Branco */
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  /* Estilo para os campos de texto (Responsável, Observações, etc.) */
+  input[type="text"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #28a745;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  /* Botão de envio */
+  button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #218838;
+  }
+  

@@ -1,0 +1,90 @@
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    color: #45a049;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    color: #0c0c0c;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.menu-section {
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 2.2em;
+    color: #45a049;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #2a8d77;
+    padding-bottom: 10px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.item-name {
+    font-size: 1.4em;
+    color: #333;
+}
+
+.item-price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #45a049;
+}
+
+.accompaniments {
+    font-style: italic;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.menu-description {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description-text {
+    font-size: 1.2em;
+    text-align: center;
+    color: #333;
+    line-height: 1.8;
+}
+

@@ -1,0 +1,80 @@
+{% extends "homepage.html" %}
+  
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pratofeito.css') }}">
+{% endblock %}
+
+{% block header %}
+<header>
+    <div class="logo">
+      <a href="/"> <img class="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"></a>
+</div>
+    <nav class="navbar">
+      <div class=" botoes">
+    
+        <ul>
+          <a href="/"><li>Início</li></a>
+          <a href="/cardapio"><li>Cardápio</li></a>
+          <a href="/eventos"><li>Eventos</li></a>
+          <a href="/pedidos"><li>Pedidos</li></a>
+          <a href="/adm"><li>Admin</li></a>
+          </ul>
+    
+    </div>
+    </class>
+    </nav>
+</class>
+</header>
+{% endblock %}
+
+{% block main1 %}
+<main>
+  <section class="formulario-prato">
+    <h1>Nosso Prato</h1>
+    <p>Casquinha de Siri, Pirão, Arroz, Feijão e Farofa</p>
+
+    <form method="post">
+      {{ form.hidden_tag() }} <!-- Campo oculto do formulário -->
+
+      <!-- Seção para escolher o tipo de casquinha -->
+      <h3>Escolha o tipo de casquinha</h3>
+      <div class="radio-group">
+        {% for option in form.tipo_casquinha %}
+          <div class="radio-item">
+            <input type="radio" id="{{ option.id }}" name="tipo_casquinha" value="{{ option.data }}">
+            <label for="{{ option.id }}">{{ option.label }}</label>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- Seção para escolher o tipo de feijão -->
+      <h3>Escolha o tipo de feijão</h3>
+      <div class="radio-group">
+        {% for option in form.tipo_feijao %}
+          <div class="radio-item">
+            <input type="radio" id="{{ option.id }}" name="tipo_feijao" value="{{ option.data }}">
+            <label for="{{ option.id }}">{{ option.label }}</label>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- Campo de observações -->
+      <h3>Observações</h3>
+      {{ form.observacao(rows=4, cols=40) }}
+
+      <!-- Botão de envio -->
+      <p>{{ form.submit() }}</p>
+    </form>
+  </section>
+</main>
+
+
+
+
+
+
+
+
+{% endblock %}
