@@ -1,4 +1,6 @@
 # Restaurante Visão do Manguezal
+<<<<<<< HEAD
+=======
 
 <img src="./restaurante/static/images/rodape/logo-rodape.png" alt="Logo" width="200">
 
@@ -96,3 +98,5 @@ SQLite: Banco de dados utilizado para armazenar informações.
 Seguindo esses passos, você estará pronto para utilizar e explorar todas as funcionalidades do projeto Restaurante_visão_manguezal.
 
 Se precisar de mais ajuda, consulte a documentação do Flask ou entre em contato com um dos integrantes do projeto.
+
+>>>>>>> fae8ddab1acf9183e73f4afde4e1e8e65097d9f4
