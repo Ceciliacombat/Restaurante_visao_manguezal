@@ -11,7 +11,10 @@ Desenvolvimento de um site que faciite os pedidos de marmita e tambem as reserva
 
  - BÁRBARA FERREIRA GOMES - barbara.gomes.setelagoas@uniatenas.edu.br
  - CECÍLIA FIGUEIREDO COMBAT - figueiredoceci2004@gmail.com
+ - JEAN FARLEY CASTRO - jean.farley@uniatenas.edu.br 
+ - MARIA LUIZA SANTOS LIMA  - luizalimabh453@gmail.com
  - RENATA AROUCA SANTOS - renata.santos.valenca@uniatenas.edu.br
+ - SUELLEN VITORIA VILELA - suellenvitoria.aluno.passos@uniatenas.edu.br
 
 ## Como Usar
 
