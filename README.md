@@ -9,6 +9,7 @@ Desenvolvimento de um site que faciite os pedidos de marmita e tambem as reserva
 
 ## Integrantes
 
+ - BÁRBARA FERREIRA GOMES - barbara.gomes.setelagoas@uniatenas.edu.br
  - CECÍLIA FIGUEIREDO COMBAT - figueiredoceci2004@gmail.com
  - RENATA AROUCA SANTOS - renata.santos.valenca@uniatenas.edu.br
 
