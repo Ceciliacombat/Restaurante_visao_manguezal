@@ -283,21 +283,26 @@ body {
     margin-bottom: 2rem;
 }
 
+
+
 .pratos-grid {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    gap: 16px;
+    justify-content: center; /* Centraliza os itens */
 }
 
 .prato-item {
-    width: 200px;
-    height: 150px;
-    background-color: #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    color: #333;
-    border-radius: 8px;
+    width: 150px; /* Define um tamanho consistente */
+    height: 150px; /* Altura fixa para os quadrados */
+    overflow: hidden; /* Oculta o excesso de imagem */
+    border-radius: 8px; /* Canto arredondado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+    background-color: #f0f0f0; /* Cor de fundo para imagens menores */
 }
 
+.prato-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Corta e ajusta a imagem ao tamanho do quadrado */
+    border-radius: 8px;
+}
